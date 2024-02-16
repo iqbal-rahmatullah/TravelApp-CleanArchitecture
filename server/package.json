@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon node ./bin/www"
+    "start": "node node ./bin/www",
+    "dev": "nodemon ./bin/www --exec babel-node",
+    "server": "DEBUG=express-simple-restapi:* npm run dev"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,6 +15,14 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
-    "nodemon": "^3.0.3"
+    "mysql2": "^3.9.1",
+    "nodemon": "^3.0.3",
+    "sequelize": "^6.37.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9"
   }
 }
