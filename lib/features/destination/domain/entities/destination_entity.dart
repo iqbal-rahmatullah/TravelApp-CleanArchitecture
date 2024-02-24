@@ -10,8 +10,8 @@ class DestinationEntity extends Equatable {
   final int rateCount;
   final String location;
   final String description;
-  final String images;
-  final String facilities;
+  final List<String> images;
+  final List<String> facilities;
 
   DestinationEntity({
     required this.id,
