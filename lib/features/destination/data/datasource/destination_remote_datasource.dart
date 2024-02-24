@@ -27,7 +27,7 @@ class DestinationRemoteDataSourceImplementation
     } else if (response.statusCode == 404) {
       throw NotFoundException;
     } else {
-      throw ServerExcetion();
+      throw ServerException();
     }
   }
 
@@ -41,7 +41,7 @@ class DestinationRemoteDataSourceImplementation
     } else if (response.statusCode == 404) {
       throw NotFoundException();
     } else {
-      throw ServerExcetion();
+      throw ServerException();
     }
   }
 
@@ -55,7 +55,7 @@ class DestinationRemoteDataSourceImplementation
     } else if (response.statusCode == 404) {
       throw NotFoundException();
     } else {
-      throw ServerExcetion();
+      throw ServerException();
     }
   }
 }

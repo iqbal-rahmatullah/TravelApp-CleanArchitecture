@@ -31,7 +31,7 @@ class DestinationRepositoryImpl implements DestinationRepository {
         return Right(result.map((e) => e.toEntity).toList());
       } on TimeoutException {
         return Left(TimeOutFailure(message: "Timeout. No Response"));
-      } on ServerExcetion {
+      } on ServerException {
         return Left(ServerFailure(message: "Server Error"));
       } on NotFoundException {
         return Left(NotFoundFailure(message: "Not Found"));
@@ -53,7 +53,7 @@ class DestinationRepositoryImpl implements DestinationRepository {
       return Right(result.map((e) => e.toEntity).toList());
     } on TimeoutException {
       return Left(TimeOutFailure(message: "Timeout"));
-    } on ServerExcetion {
+    } on ServerException {
       return Left(ServerFailure(message: "Server Error"));
     } on NotFoundException {
       return Left(NotFoundFailure(message: "Not Found"));
@@ -69,7 +69,7 @@ class DestinationRepositoryImpl implements DestinationRepository {
       return Right(result.map((e) => e.toEntity).toList());
     } on TimeoutException {
       return Left(TimeOutFailure(message: "Timeout"));
-    } on ServerExcetion {
+    } on ServerException {
       return Left(ServerFailure(message: "Server Error"));
     } on NotFoundException {
       return Left(NotFoundFailure(message: "Not Found"));
